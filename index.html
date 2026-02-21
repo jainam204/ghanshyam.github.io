@@ -1,1 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghanshyam Sinh | Mechanical Design Engineer</title>
+    <meta name="description"
+        content="Portfolio of Ghanshyam Sinh Natvarsinh Solanki, a Mechanical Design Engineer specializing in 3D modeling, sheet metal, and structural design.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="blueprint-bg"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-crosshair"></div>
+
+    <div class="scroll-progress-container">
+        <svg class="gear-progress" viewBox="0 0 100 100">
+            <circle class="gear-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="gear-path" id="gear-path" cx="50" cy="50" r="40"></circle>
+            <g class="gear-icon" id="rotating-gear">
+                <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="6" />
+                <circle cx="50" cy="50" r="10" fill="currentColor" />
+                <rect x="46" y="20" width="8" height="10" fill="currentColor" />
+                <rect x="46" y="70" width="8" height="10" fill="currentColor" />
+                <rect x="20" y="46" width="10" height="8" fill="currentColor" />
+                <rect x="70" y="46" width="10" height="8" fill="currentColor" />
+                <rect x="27.5" y="27.5" width="10" height="8" transform="rotate(45 32.5 31.5)" fill="currentColor" />
+                <rect x="58.5" y="58.5" width="10" height="8" transform="rotate(45 63.5 62.5)" fill="currentColor" />
+                <rect x="27.5" y="58.5" width="8" height="10" transform="rotate(-45 31.5 63.5)" fill="currentColor" />
+                <rect x="58.5" y="27.5" width="8" height="10" transform="rotate(-45 62.5 32.5)" fill="currentColor" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-drafting-compass"></i>
+            <span>G. SOLANKI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#experience" class="nav-item">Experience</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#education" class="nav-item">Education</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="blueprint-toggle" aria-label="Toggle Blueprint Mode" title="Toggle Blueprint Grid">
+                <i class="fa-solid fa-border-all"></i>
+            </button>
+            <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-sun" id="theme-icon"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="mono-text accent">> INITIATING DESIGN PROTOCOL...</p>
+                <h1 class="glitch" data-text="GHANSHYAM SINH SOLANKI">GHANSHYAM SINH SOLANKI</h1>
+                <h2 class="role-title">Mechanical Design Engineer</h2>
+                <div class="hero-objective">
+                    <p>"I seek challenging opportunities where I can fully use my skills for the success of the
+                        organization."</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Models</span>
+                        <i class="fa-solid fa-cube"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Initiate Contact</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cube-wrapper" id="hero-cube">
+                    <div class="cube">
+                        <div class="face front">FRONT</div>
+                        <div class="face back">BACK</div>
+                        <div class="face right">RIGHT</div>
+                        <div class="face left">LEFT</div>
+                        <div class="face top">TOP</div>
+                        <div class="face bottom">BOTTOM</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="container relative">
+                <div class="cad-measurement m-top"></div>
+                <div class="section-header">
+                    <h2 class="section-title">01. About Me</h2>
+                    <div class="line-divider"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a highly motivated <strong>Mechanical Design Engineer</strong> focused on 3D modeling,
+                            sheet metal, and structural design. With a strong foundation in manufacturing processes and
+                            CAD software, I translate complex engineering concepts into highly functional,
+                            direct-to-manufacturing models.</p>
+                        <ul class="personal-details mono-text">
+                            <li><span class="label">Date of Birth:</span> 17/11/1997</li>
+                            <li><span class="label">Languages:</span> English, Hindi, Gujarati</li>
+                            <li><span class="label">Interests:</span> Design Engineering, Production, Automobile
+                                Assemblies</li>
+                        </ul>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <i class="fa-solid fa-industry"></i>
+                            <h3>2+ Years</h3>
+                            <p>Industry Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <h3>Instructor</h3>
+                            <p>Former Design Professor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cad-measurement m-bottom"></div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">02. Career Timeline</h2>
+                    <div class="line-divider"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date mono-text">01/2022 – Present</span>
+                            <h3 class="timeline-role">Design Engineer</h3>
+                            <h4 class="timeline-company">Industrial Analytical Services</h4>
+                            <p>Leading design, 3D modeling & 2D drawings. Specialized in creating precise sheet metal
+                                and structural member models ready for direct manufacturing, significantly reducing lead
+                                time and errors.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date mono-text">02/2020 – 12/2021</span>
+                            <h3 class="timeline-role">Design Professor</h3>
+                            <h4 class="timeline-company">Engineering Institute</h4>
+                            <p>Instructed students and professionals in AutoCAD 2D/3D, SolidWorks, Creo, and MasterCAM.
+                                Actively guided outsourcing industry projects and mentored student capstone projects to
+                                ensure practical, real-world CAD proficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date mono-text">09/2019 – 02/2020</span>
+                            <h3 class="timeline-role">Design & Production Engineer</h3>
+                            <p>Managed the end-to-end design and manufacturing lifecycle of specialized tanks, complex
+                                sheet metal parts, and large-scale amusement rides.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date mono-text">06/2018 – 12/2018</span>
+                            <h3 class="timeline-role">Mechanical Trainee</h3>
+                            <p>Focused on core automobile engineering including engine components, compression ratio
+                                calculations, and advanced transmission layouts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">03. Technical Capabilities</h2>
+                    <div class="line-divider"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category software">
+                        <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> CAD / CAM Software</h3>
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>SolidWorks</span>
+                                <span class="mono-text">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>AutoCAD 2D & 3D</span>
+                                <span class="mono-text">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>Creo</span>
+                                <span class="mono-text">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-info">
+                                <span>MasterCAM</span>
+                                <span class="mono-text">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category domains">
+                        <h3 class="category-title"><i class="fa-solid fa-gears"></i> Core Domains</h3>
+                        <div class="domain-tags">
+                            <span class="tag">Sheet Metal Design</span>
+                            <span class="tag">Structural Design</span>
+                            <span class="tag">DFM (Design for Mfg)</span>
+                            <span class="tag">Production Planning</span>
+                            <span class="tag">3D Modeling</span>
+                            <span class="tag">2D Drafting</span>
+                        </div>
+
+                        <div class="gauge-container">
+                            <div class="gauge" data-value="90">
+                                <svg viewBox="0 0 100 50">
+                                    <path class="gauge-bg" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="8">
+                                    </path>
+                                    <path class="gauge-val" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="8"
+                                        stroke-dasharray="125.6" stroke-dashoffset="125.6"></path>
+                                </svg>
+                                <div class="gauge-label">Precision</div>
+                            </div>
+                            <div class="gauge" data-value="85">
+                                <svg viewBox="0 0 100 50">
+                                    <path class="gauge-bg" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="8">
+                                    </path>
+                                    <path class="gauge-val" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke-width="8"
+                                        stroke-dasharray="125.6" stroke-dashoffset="125.6"></path>
+                                </svg>
+                                <div class="gauge-label">Efficiency</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">04. Engineering Projects</h2>
+                    <div class="line-divider"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-drawing-lines"></div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fa-solid fa-car-side project-icon"></i>
+                                <h3>Go-Kart (Open Wheel Auto)</h3>
+                            </div>
+                            <p class="project-desc">Complete lifecycle execution including design, manufacturing,
+                                assembly, and marketing. Built for deep technical learning and competing in real racing
+                                events across India.</p>
+                            <div class="project-tech mono-text">
+                                <span>SolidWorks</span><span>Automobile</span><span>Assembly</span>
+                            </div>
+                            <div class="project-award">
+                                <i class="fa-solid fa-trophy"></i> First Prize Winner & SSIP/GIC Certified
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-drawing-lines"></div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fa-solid fa-tractor project-icon"></i>
+                                <h3>Multi-Crop Thresher</h3>
+                            </div>
+                            <p class="project-desc">Redesigned agricultural machinery focusing on internal mechanisms to
+                                drastically improve efficiency and provide cleaner output for farmers.</p>
+                            <div class="project-tech mono-text">
+                                <span>Sheet Metal</span><span>Mechanism Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-drawing-lines"></div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fa-solid fa-shoe-prints project-icon"></i>
+                                <h3>Smart Shoes</h3>
+                            </div>
+                            <p class="project-desc">Innovative conceptual design featuring embedded sensors for activity
+                                tracking and an advanced magnetic lace system for ease of use.</p>
+                            <div class="project-tech mono-text">
+                                <span>Concept Design</span><span>Ergonomics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-drawing-lines"></div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fa-solid fa-smog project-icon"></i>
+                                <h3>Air Pollution Control</h3>
+                            </div>
+                            <p class="project-desc">Designed an industrial chimmeny attachment using targeted water
+                                spray systems to capture and reduce airborne particulate matter.</p>
+                            <div class="project-tech mono-text">
+                                <span>Fluid Dynamics</span><span>Environmental</span>
+                            </div>
+                            <div class="project-award">
+                                <i class="fa-solid fa-trophy"></i> First Prize Winner
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-drawing-lines"></div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fa-solid fa-ship project-icon"></i>
+                                <h3>Solar-Powered Boat</h3>
+                            </div>
+                            <p class="project-desc">Developed a structural and buoyancy concept for a small-scale
+                                watercraft powered entirely by renewable solar energy.</p>
+                            <div class="project-tech mono-text">
+                                <span>Structural</span><span>Sustainability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="section">
+            <div class="container dual-col">
+                <div class="col">
+                    <div class="section-header">
+                        <h2 class="section-title">05. Education</h2>
+                        <div class="line-divider"></div>
+                    </div>
+                    <div class="edu-list">
+                        <div class="edu-item">
+                            <div class="edu-year mono-text">2019</div>
+                            <div class="edu-details">
+                                <h3>B.E. Mechanical Engineering</h3>
+                                <p>CGPA: 7.69</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-year mono-text">2015</div>
+                            <div class="edu-details">
+                                <h3>12th Higher Secondary</h3>
+                                <p>Grade: 60%</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-year mono-text">2013</div>
+                            <div class="edu-details">
+                                <h3>10th Secondary</h3>
+                                <p>Grade: 78%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="section-header">
+                        <h2 class="section-title">06. Awards & Certifications</h2>
+                        <div class="line-divider"></div>
+                    </div>
+                    <ul class="achievement-list">
+                        <li>
+                            <div class="ach-icon"><i class="fa-solid fa-medal"></i></div>
+                            <div class="ach-content">
+                                <h4>First Prize Winner</h4>
+                                <p>Air Pollution Control Project & Go-Kart Racing Event</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ach-icon"><i class="fa-solid fa-certificate"></i></div>
+                            <div class="ach-content">
+                                <h4>Certified Innovation</h4>
+                                <p>SSIP & GIC Certifications for Go-Kart Development</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ach-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="ach-content">
+                                <h4>Strategic Thinker</h4>
+                                <p>3-Time Treasure Hunt Winner, demonstrating analytical and problem-solving skills
+                                    under pressure.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">07. Initiate Contact</h2>
+                    <div class="line-divider center"></div>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>Let's Build Something Great</h3>
+                        <p>Currently open for new opportunities to leverage mechanical design expertise for innovative
+                            engineering solutions.</p>
+                        <div class="contact-methods">
+                            <a href="mailto:ghanshyam.solanki@example.com" class="method-card">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>Email Address</span>
+                            </a>
+                            <a href="#" class="method-card">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn Network</span>
+                            </a>
+                            <a href="#" class="method-card">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>Download Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Name / Organization</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Project Requirements / Inquiry</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Transmission</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-compass-drafting"></i> G. SOLANKI
+            </div>
+            <p class="mono-text">ENGINEERED WITH PRECISION &copy; 2026 GHANSHYAM SINH SOLANKI</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
